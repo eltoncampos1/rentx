@@ -5,7 +5,7 @@ export interface ICreateCategoryDTO {
   description: string;
 }
 
-export interface ICreateCategoriesRepository {
+export interface ICategoriesRepository {
   findByName(name: string): Category | undefined;
   list(): Category[];
   create({ name, description }: ICreateCategoryDTO): void;
