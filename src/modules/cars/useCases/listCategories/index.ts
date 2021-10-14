@@ -2,8 +2,8 @@ import { CategoriesRepository } from '../../repositories/CategoriesRepository';
 import { ListCategoriesController } from './ListCategoriesController';
 import { ListCategoriesUsecase } from './ListCategoriesUseCase';
 
-const categoryRepository = new CategoriesRepository();
-const listCategoriesUsecase = new ListCategoriesUsecase(categoryRepository);
+const categoriesRepository = CategoriesRepository.getInstace();
+const listCategoriesUsecase = new ListCategoriesUsecase(categoriesRepository);
 const listCategoriesController = new ListCategoriesController(
   listCategoriesUsecase,
 );
